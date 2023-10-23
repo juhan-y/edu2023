@@ -44,7 +44,7 @@ Docker에  자세한 설명과 실습을 한다.
 <br/>
 
 #### 하이퍼바이저
-
+ (윈도우의 HyperV 같은 VM을 올릴 수 있는 프로그램)
 <br/>
 
 공유 컴퓨팅 자원을 관리하고 가상머신들을 컨트롤(I/O  명령  처리) 하는 중간관리자.
@@ -70,6 +70,8 @@ Docker에  자세한 설명과 실습을 한다.
 
 <br/>
 
+(VM은 HyperVisor 위에 OS를 올림 -> 매우 느린 이유, Container는 Hypervisor없이 OS에 의존하지 않고 프로그램을 불러올 수 있음. (빠르고 의존성이 적음))
+(Container Runtime -> Docker와 같은 Container 관리 시스템)
 
 <img src="./assets/vm_container.png" style="width: 80%; height: auto;"/> 
 
@@ -79,6 +81,8 @@ Docker에  자세한 설명과 실습을 한다.
 
 <br/>
 
+(어떤 환경에서라도 도커 이미지가 있다면 같은 환경으로 만들 수 있음. Container Runtime이 다르더라도 이미지는 표준이므로 동일.)
+(도커 위에 instance를 올리는 것 -> Container를 올리는 것. 메모리에 올라가 있는 것을 Container라고도 함. -> K8S에서는 POD라고도 불리게 됨.)
 소개 및 배경
 - 도커는 컨테이너 기반의 오픈소스 가상화 플랫폼이다.
 - 다양한 이유로 계속 바뀌는 서버 환경과 개발 환경 문제를 해결하기 위해 등장했다.
